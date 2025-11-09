@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Automation Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegrettionSuite(failed)">
+    <classes>
+      <class name="com.advantageonlineshop.testcases.TC_MyAccountTestPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="Registrationpage"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.advantageonlineshop.testcases.TC_MyAccountTestPage -->
+      <class name="com.advantageonlineshop.testcases.TC_SubmitOrder">
+        <methods>
+          <include name="setUp"/>
+          <include name="teardown"/>
+          <include name="testSearchAndAddProductToCart"/>
+        </methods>
+      </class> <!-- com.advantageonlineshop.testcases.TC_SubmitOrder -->
+    </classes>
+  </test> <!-- RegrettionSuite(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->
