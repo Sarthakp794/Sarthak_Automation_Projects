@@ -5,9 +5,8 @@
     <classes>
       <class name="TestClass.SleekBillTest">
         <methods>
-          <include name="LogTest"/>
+          <include name="ProductTest"/>
           <include name="takescreenshot"/>
-          <include name="ClientTest"/>
           <include name="Setup"/>
           <include name="startReport"/>
           <include name="endReport"/>

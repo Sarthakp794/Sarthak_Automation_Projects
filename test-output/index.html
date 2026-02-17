@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\MI\AppData\Local\Temp\testng-eclipse-269118371\testng-customsuite.xml</span>
+                    <span>C:\Users\MI\AppData\Local\Temp\testng-eclipse-1010445755\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.SleekBillTest" class="method navigator-link" hash-for-method="ClientTest">ClientTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.SleekBillTest" class="method navigator-link" hash-for-method="LogTest">LogTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="TestClass.SleekBillTest" class="method navigator-link" hash-for-method="LogTest">LogTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="TestClass.SleekBillTest" class="method navigator-link" hash-for-method="ProductTest">ProductTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,16 +131,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ClientTest">
-                  </a> <!-- ClientTest -->
-                  <span class="method-name">ClientTest</span>
+                  <a name="LogTest">
+                  </a> <!-- LogTest -->
+                  <span class="method-name">LogTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="LogTest">
-                  </a> <!-- LogTest -->
-                  <span class="method-name">LogTest</span>
+                  <a name="ProductTest">
+                  </a> <!-- ProductTest -->
+                  <span class="method-name">ProductTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\MI\AppData\Local\Temp\testng-eclipse-269118371\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\MI\AppData\Local\Temp\testng-eclipse-1010445755\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,18 +199,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ClientTest')
+data.setCell(0, 1, 'ProductTest')
 data.setCell(0, 2, 'TestClass.SleekBillTest')
-data.setCell(0, 3, 3230);
+data.setCell(0, 3, 3700);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'LogTest')
 data.setCell(1, 2, 'TestClass.SleekBillTest')
-data.setCell(1, 3, 560);
+data.setCell(1, 3, 494);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -225,9 +225,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestClass.SleekBillTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">ClientTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -243,27 +250,27 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">Setup</span>
-                <span class="method-start">300 ms</span>
+                <span class="method-start">351 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">LogTest</span>
-                <span class="method-start">4844 ms</span>
+                <span class="method-start">5883 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takescreenshot</span>
-                <span class="method-start">5406 ms</span>
+                <span class="method-start">6384 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">ClientTest</span>
-                <span class="method-start">5590 ms</span>
+                <span class="method-name">ProductTest</span>
+                <span class="method-start">6654 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takescreenshot</span>
-                <span class="method-start">8823 ms</span>
+                <span class="method-start">10359 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">9031 ms</span>
+                <span class="method-start">10639 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
