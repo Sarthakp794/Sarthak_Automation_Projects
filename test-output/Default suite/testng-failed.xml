@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestClass.SleekBillTest">
+      <class name="TestClass.ClientsPageTest">
         <methods>
-          <include name="ProductTest"/>
+          <include name="clickOnClientCheckboxTest"/>
+          <include name="verifyFilterText"/>
           <include name="takescreenshot"/>
-          <include name="Setup"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
+          <include name="setupReport"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="verifyClientsPageTitle"/>
         </methods>
-      </class> <!-- TestClass.SleekBillTest -->
+      </class> <!-- TestClass.ClientsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

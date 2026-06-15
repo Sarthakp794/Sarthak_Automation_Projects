@@ -1,64 +1,42 @@
 package com.pages;
-import java.time.Duration;
-import org.openqa.selenium.JavascriptExecutor;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class ClientsPage extends com.pages.Baseclass {
+	public WebDriver driver;
+	
+	
+	
+@FindBy(xpath="//a[text()=\"Filter Clients / Customers\"]")
+WebElement FilterText;
+
+@FindBy(xpath="(//a[contains(text(),\"New\")])[3]")
+WebElement NewClientButton;
 
 
-public class ClientsPage {
-public WebDriver driver;
 public ClientsPage(WebDriver driver) {
 this.driver= driver;
 PageFactory.initElements(driver, this);
 }
-@FindBy(xpath="//a[contains(text(),'Clients')]")
-WebElement ClientButton;
 
-@FindBy(xpath="(//a[text()='New'])[2]")
-WebElement addClientBtn;
-
-@FindBy(xpath="//label[text()=\"GSTIN\"]/following-sibling::input")
-WebElement GSTINField;
-
-@FindBy(xpath="//button[text()=\"Fetch\"]")
-WebElement FetchButton;
-
-@FindBy(xpath="//button[text()=\"Save\"]")
-WebElement SaveButton;
-
-public void clientbuton() {
-WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.elementToBeClickable(ClientButton)).click();
-WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(addClientBtn));
-
-JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("arguments[0].scrollIntoView(true);window.scrollBy(0, -120);", btn
-);
-btn.click();
+public String verifyClientsPageTitle() {
+	return driver.getTitle();
 }
-public void GSTINFieleddmethod(String num) {
-	
-WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
-WebElement gstfieldbtn = wait.until(ExpectedConditions.elementToBeClickable(GSTINField));
 
-JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("arguments[0].scrollIntoView(true);window.scrollBy(0, 120);", gstfieldbtn);
-gstfieldbtn.sendKeys(num);
-wait.until(ExpectedConditions.elementToBeClickable(FetchButton)).click();
+public boolean verifyFilterText() {
+	return FilterText.isDisplayed();
+}
 
-System.out.println("Displayed: " + SaveButton.isDisplayed());
-System.out.println("Enabled: " + SaveButton.isEnabled());
+public void clickOnClientCheckbox(String clientName) {
+	WebElement checkbox = driver.findElement(By.xpath("//div[text()=\"0TestAdvancePayment\"]//parent::td[@class=\"client-company-name title\"]//preceding-sibling::td//div//input[@type=\"checkbox\"]//following-sibling::span[text()=\"Select\"]"));
+	checkbox.click();
+}
 
-WebElement saveButton= wait.until(ExpectedConditions.elementToBeClickable(SaveButton));
-js.executeScript("arguments[0].scrollIntoView(true);window.scrollBy(0, 200);", saveButton);
-
-Actions actions = new Actions(driver);
-actions.moveToElement(saveButton).pause(Duration.ofMillis(300)).click().perform();
-
+public void newClientButton() {
+	NewClientButton.click();
 }
 }
